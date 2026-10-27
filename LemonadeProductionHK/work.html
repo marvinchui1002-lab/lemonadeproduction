@@ -44,6 +44,9 @@
             object-fit: cover; /* Crops video to fill the square perfectly without stretching */
             pointer-events: none; /* Prevents video controls from interfering with hover */
         }
+		.ig-post video[controls] {
+    pointer-events: auto; /* 播放時解鎖控制條 */
+}
 
         /* Hidden Title that fades in on hover */
         .ig-post-title {
