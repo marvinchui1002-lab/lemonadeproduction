@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Lemonade Production</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>		
+<!-- Lemonade Sip Transition Overlay -->
+    <div id="sip-overlay" class="sip-overlay">
+        <div class="cup-container">
+            <div class="straw"></div>
+            <div class="lemon-slice"></div> <!-- NEW LEMON SLICE -->
+            <div class="cartoon-cup">
+                <div class="liquid" id="lemonade-liquid"></div>
+            </div>
+        </div>
+    </div>
+	
+    <header class="site-header">
+        <a href="index.html" class="logo">LEMONADE PRODUCTION</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="story.html">Story</a>
+            <a href="service.html">Service</a>
+            <a href="work.html">Work</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Dedicated Story Section -->
+    <section class="page-section animate-load">
+        <div class="story-container">
+			<h1 class="story-main-title">Fresh Ideas.<br>Serious Craft.</h1>
+            
+            <p class="story-lead">When life gives you lemons, pass them to us. We help you make lemonade.</p>
+            
+            <p>Remember the sheer excitement of running a neighborhood lemonade stand on a scorching summer day? That pure, uncontainable energy to make something awesome and share it with everyone who walks by?</p>
+            
+            <p>That is exactly how we approach every single project at <strong>Lemonade Production</strong>.</p>
+            
+            <p>Founded by a team backed by <strong>over 6 years of hands-on video production experience</strong>, we set out to build a studio where high-end filmmaking feels approachable, collaborative, and genuinely fun. We strip away the corporate stiffness and gatekeeping of traditional agencies, replacing it with transparent communication, boundless curiosity, and a client-first mindset. When you work with us, you’re not just hiring a crew—you’re stepping into an energetic creative sandbox.</p>
+            
+            <hr class="story-divider">
+
+            <h2>Where Cinema Meets Machine Intelligence</h2>
+            
+            <p>We don’t just point cameras; we engineer visual stories designed to stop the scroll. By seamlessly weaving cutting-edge <strong>Generative AI</strong> into our production workflows—from rapid concept generation and AI-assisted pre-visualization to surreal world-building and smart post-production—we unlock possibilities that used to take months and massive studio budgets to achieve.</p>
+                
+            <p>Whether we’re directing a polished cinematic brand commercial, running a multi-camera live broadcast, or generating impossible digital environments from scratch, we back our tech-forward speed with rock-solid production fundamentals.</p>
+                
+            <hr class="story-divider">
+
+            <h2>Our Recipe</h2>
+                
+            <p>No fluff, no ego, and zero outdated formulas. Just a team of passionate visual storytellers who love what they do, armed with the latest tools and a proven track record.</p>
+            
+            <p class="story-closing">Whatever your vision, we make sure the final cut is bold, effortless, and <em>always freshly squeezed</em>.</p>
+        </article>
+    </main>
+      </div>
+    </section>
+<!-- Page Transition Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav a, a.btn-primary');
+            const overlay = document.getElementById('sip-overlay');
+            const liquid = document.getElementById('lemonade-liquid');
+            const straw = document.querySelector('.straw');
+            const lemon = document.querySelector('.lemon-slice'); // Select the lemon slice
+
+            // 1. Fade away when page loads
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.style.display = 'none', 300); 
+            }, 300); 
+
+            // 2. Trigger animation on navigation click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if(this.getAttribute('href').startsWith('#') || this.getAttribute('href').startsWith('mailto:')) return;
+
+                    e.preventDefault(); 
+                    const targetUrl = this.href;
+
+                    overlay.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        overlay.style.opacity = '1';
+                        
+                        // Start all 3 animations in sync
+                        liquid.style.animation = 'sipDown 0.6s forwards ease-in-out';
+                        liquid.style.animationDelay = '0.2s'; 
+                        
+                        straw.style.animation = 'sipStrawDown 0.6s forwards ease-in-out';
+                        straw.style.animationDelay = '0.2s';
+
+                        lemon.style.animation = 'lemonWiggle 0.6s forwards ease-in-out';
+                        lemon.style.animationDelay = '0.2s';
+                    }, 10);
+
+                    // 3. Navigate to next page
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 1000); 
+                });
+            });
+        });
+    </script>
+	    <!-- FIXED: Footer is now INSIDE the body tag -->
+    <footer class="site-footer">
+        <!-- Logo in the footer -->
+        <img src="images/logo.svg" alt="Lemonade Production" class="footer-logo">
+        <p>© 2026 Lemonade Production. All rights reserved.</p>
+    </footer>
+</body>
+</html>
