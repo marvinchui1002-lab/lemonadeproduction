@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Lemonade Production</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <style>
+        /* --- Instagram Style Video Grid --- */
+        .ig-gallery-container {
+            max-width: 935px;
+            margin: 0 auto 80px auto;
+        }
+
+        .ig-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            width: 100%;
+        }
+
+        /* 將 ig-post 改為支援 <a> 連結標籤的屬性 */
+        .ig-post {
+            display: block;
+            text-decoration: none; /* 移除連結預設底線 */
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #000;
+            cursor: pointer;
+            z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0s;
+        }
+
+        .ig-post:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.8);
+            border-radius: 8px;
+        }
+
+        .ig-post video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none; /* 確保滑鼠點擊可以穿透影片，觸發 <a> 標籤的 URL 跳轉 */
+        }
+
+        .ig-post-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 15px 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            color: #fff;
+            margin: 0;
+            font-size: 1rem;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: left;
+        }
+
+        .ig-post:hover .ig-post-title {
+            opacity: 1;
+        }
+
+        .page-section h2 {
+            max-width: 935px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Lemonade Sip Transition Overlay -->
+    <div id="sip-overlay" class="sip-overlay">
+        <div class="cup-container">
+            <div class="straw"></div>
+            <div class="lemon-slice"></div> 
+            <div class="cartoon-cup">
+                <div class="liquid" id="lemonade-liquid"></div>
+            </div>
+        </div>
+    </div>
+    
+    <header class="site-header">
+        <a href="index.html" class="logo">LEMONADE PRODUCTION</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="story.html">Story</a>
+            <a href="service.html">Service</a>
+            <a href="work.html" class="active">Work</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </nav>
+    </header>
+
+    <section class="page-section animate-load">
+        
+        <div class="ig-gallery-container">
+            <h2>OG Lemon - Video Production</h2>
+            <div class="ig-grid">
+                <!-- Video 1 : 替換 href="#" 為你的目標網址 -->
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793104367/video1.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793104367/video1.mp4" poster="poster1.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">Lonely Together</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793101984/video/video2.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793101984/video/video2.mp4" poster="poster2.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">The End Begin Somewhere</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793102135/video/video3.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793102135/video/video3.mp4" poster="poster3.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">A City, A House & A Body</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793102118/video/video4.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793102118/video/video4.mp4" poster="poster4.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">PROJECT 21st: Documentaries</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793102105/video/video5.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793102105/video/video5.mp4" poster="poster5.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">The Murray 5th Anniversary Promo</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793101993/video/video6.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793101993/video/video6.mp4" poster="poster6.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">The Fates of Mountains and Rivers</h3>
+                </a>
+            </div>
+        </div>
+
+        <div class="ig-gallery-container">
+            <h2>Neo Juice -  AI-Driven Production</h2>
+            <div class="ig-grid">
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793101946/video/video10.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793101946/video/video10.mp4" poster="poster10.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">The Greatest Taxi Driver</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793101884/video/video11.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793101884/video/video11.mp4" poster="poster11.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">Antnetic Lost</h3>
+                </a>
+                
+                <a href="https://res.cloudinary.com/pqltphs3/video/upload/v1793102071/video/video12.mp4" target="_blank" class="ig-post">
+                    <video src="https://res.cloudinary.com/pqltphs3/video/upload/v1793102071/video/video12.mp4" poster="poster12.jpg" muted loop playsinline></video>
+                    <h3 class="ig-post-title">Beyond the Shore</h3>
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- SIP OVERLAY TRANSITION ---
+            const navLinks = document.querySelectorAll('nav a, a.btn-primary');
+            const overlay = document.getElementById('sip-overlay');
+            const liquid = document.getElementById('lemonade-liquid');
+            const straw = document.querySelector('.straw');
+            const lemon = document.querySelector('.lemon-slice'); 
+
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.style.display = 'none', 300); 
+            }, 300); 
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if(!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+                    
+                    // 如果點擊的是 target="_blank" 的新分頁連結，不觸發 Sip 動畫
+                    if(this.getAttribute('target') === '_blank') return;
+
+                    e.preventDefault(); 
+                    const targetUrl = this.href;
+
+                    overlay.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        overlay.style.opacity = '1';
+                        
+                        liquid.style.animation = 'sipDown 0.6s forwards ease-in-out';
+                        liquid.style.animationDelay = '0.2s'; 
+                        
+                        straw.style.animation = 'sipStrawDown 0.6s forwards ease-in-out';
+                        straw.style.animationDelay = '0.2s';
+
+                        lemon.style.animation = 'lemonWiggle 0.6s forwards ease-in-out';
+                        lemon.style.animationDelay = '0.2s';
+                    }, 10);
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 1000); 
+                });
+            });
+
+			// --- HOVER TO PREVIEW LOGIC ---
+            const igPosts = document.querySelectorAll('.ig-post');
+
+            igPosts.forEach(post => {
+                const video = post.querySelector('video');
+
+                post.addEventListener('mouseenter', () => {
+                    video.play().catch(() => {});
+                });
+
+                post.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.load(); // 重設影片，即刻出返 Poster Frame
+                });
+            });
+
+                // 滑鼠移出：暫停並將畫面重置回第一秒 (Poster)
+                post.addEventListener('mouseleave', () => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            });
+        });
+    </script>
+    
+    <footer class="site-footer">
+        <img src="images/logo.svg" alt="Lemonade Production" class="footer-logo">
+        <p>© 2026 Lemonade Production. All rights reserved.</p>
+    </footer>
+</body>
+</html>
