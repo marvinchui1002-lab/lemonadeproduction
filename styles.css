@@ -505,3 +505,127 @@ nav a.btn-primary:hover { color: var(--brand-dark); }
     transform: translateY(-15px);
     pointer-events: none; /* 避免隱形後擋住滑鼠 */
 }
+
+/* ==========================================
+   全站手機版自適應優化 (Mobile Responsive)
+   螢幕寬度小於 768px 自動生效
+   ========================================== */
+@media (max-width: 768px) {
+
+    /* 1. 全局基礎排版：防止左右滑動走位 */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. 導航欄 (Header)：在手機上垂直緊湊排列 */
+    .site-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 15px 20px !important;
+        gap: 12px !important;
+    }
+
+    .site-header .logo {
+        font-size: 1.1rem !important;
+        text-align: center;
+    }
+
+    .site-header nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px 14px !important;
+    }
+
+    .site-header nav a {
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+    }
+
+    .site-header nav .btn-primary {
+        padding: 6px 14px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. 頁面主要容器 (Section / Container) 左右留邊 */
+    .page-section, 
+    main, 
+    .container {
+        padding: 20px 16px 60px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. 標題與大字在手機上自動縮細，避免斷行難睇 */
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.25 !important;
+    }
+
+    h2 {
+        font-size: 1.35rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* 5. 首頁 (index.html) Hero 大字與影片適配 */
+    .hero-content h1 {
+        font-size: 2rem !important;
+    }
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+
+    /* 6. 作品頁 (work.html) 網格由 3 欄自動轉為 2 欄 */
+    .ig-gallery-container {
+        padding: 0 !important;
+        margin-bottom: 40px !important;
+    }
+
+    .ig-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 6px !important;
+    }
+
+    .ig-post-title {
+        font-size: 0.8rem !important;
+        padding: 10px 8px 8px !important;
+        opacity: 1 !important; /* 手機無 hover，直接常駐顯示片名 */
+    }
+
+    /* 7. 服務與定價卡片 (service.html / pricing.html) 由多欄橫排自動變為垂直單欄 */
+    .pricing-grid,
+    .service-grid,
+    .card-grid,
+    .plans-container {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* 8. 聯絡表單 (contact.html) 適配手機寬度 */
+    .contact-container,
+    .contact-form,
+    form {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    input, textarea, button {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 9. 頁尾 (Footer) 置中縮細 */
+    .site-footer {
+        padding: 30px 20px !important;
+        text-align: center !important;
+    }
+}
