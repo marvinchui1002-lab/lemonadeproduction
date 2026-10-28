@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Lemonade Production</title>
+    
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    
+    <style>
+        .pricing-container {
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .pricing-intro {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .pricing-intro h2 {
+            margin-bottom: 15px;
+        }
+        .pricing-category {
+            margin-bottom: 50px;
+            background-color: var(--brand-darker, #0a0a0a);
+            padding: 40px;
+            border-radius: 8px;
+            border-top: 4px solid var(--brand-yellow, #FFD000);
+        }
+        .pricing-category h3 {
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #333333;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #222222;
+        }
+        .pricing-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .pricing-name {
+            font-size: 1.1rem;
+            color: #cccccc;
+        }
+        
+        /* New styling for the "Starts at" text to stack neatly */
+        .pricing-cost-container {
+            text-align: right;
+            min-width: 130px;
+        }
+        .pricing-starts-at {
+            font-size: 0.75rem;
+            color: #888888;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 2px;
+            display: block;
+        }
+        .pricing-cost {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--brand-yellow, #FFD000);
+            display: block;
+        }
+
+        .pricing-footer-cta {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>      
+    <div id="sip-overlay" class="sip-overlay">
+        <div class="cup-container">
+            <div class="straw"></div>
+            <div class="lemon-slice"></div> 
+            <div class="cartoon-cup">
+                <div class="liquid" id="lemonade-liquid"></div>
+            </div>
+        </div>
+    </div>
+    
+    <header class="site-header">
+        <a href="index.html" class="logo">LEMONADE PRODUCTION</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="story.html">Story</a>
+            <a href="service.html">Service</a>
+            <a href="work.html">Work</a>
+            <a href="pricing.html" class="active">Pricing</a>
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </nav>
+    </header>
+
+    <main class="page-section animate-load">
+        <div class="pricing-container">
+            
+            <div class="pricing-intro">
+                <h2>Transparent Pricing</h2>
+                <p>No hidden fees, no sour surprises. Build your custom package from our a la carte menu below, or contact us for a comprehensive project quote.</p>
+            </div>
+
+            <div class="pricing-category">
+                <h3>AI-Driven Production</h3>
+                <div class="pricing-item">
+                    <div class="pricing-name">Generative AI Image Creation</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$400 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Generative AI Video Production</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$4,000 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">2D & 3D AI-Assisted Animations</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$4,500 HKD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-category">
+                <h3>Video Production</h3>
+                <div class="pricing-item">
+                    <div class="pricing-name">Video Shooting</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$4,000 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Offline  Video Editing</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$4,000 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Cinematic Colour-Grading</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$2,000 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Custom Motion Graphics</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$3,000 HKD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-category" style="border-top-color: #ffffff;">
+                <h3 style="color: #FFD000;">Additional Services</h3>
+                <div class="pricing-item">
+                    <div class="pricing-name">2D Graphic Design & Assets</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">Starts at</span>
+                        <span class="pricing-cost">$1,500 HKD</span>
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Combine AI with Live-Action</div>
+                    <div class="pricing-cost-container">
+                        <span class="pricing-starts-at">
+                        <span class="pricing-cost">
+                    </div>
+                </div>
+                <div class="pricing-item">
+                    <div class="pricing-name">Custom Retainer Packages</div>
+                    <div class="pricing-cost-container"></div>
+                </div>
+            </div>
+
+            <div class="pricing-footer-cta">
+                <h3 style="margin-bottom: 15px; font-size: 1.5rem; color: #fff;">Need a full package?</h3>
+                <p style="margin-bottom: 25px;">Mix and match is great, but sometimes you just want the whole lemon. Let's talk about your project scope and get you a custom quote.</p>
+                <a href="contact.html" class="btn-primary">Get a Custom Quote</a>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav a, a.btn-primary, a.btn-secondary');
+            const overlay = document.getElementById('sip-overlay');
+            const liquid = document.getElementById('lemonade-liquid');
+            const straw = document.querySelector('.straw');
+            const lemon = document.querySelector('.lemon-slice'); 
+
+            // 1. Fade away when page loads
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.style.display = 'none', 300); 
+            }, 300); 
+
+            // 2. Trigger animation on navigation click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if(!href || href.startsWith('#') || href.startsWith('mailto:')) return;
+
+                    e.preventDefault(); 
+                    const targetUrl = this.href;
+
+                    overlay.style.display = 'flex';
+                    
+                    setTimeout(() => {
+                        overlay.style.opacity = '1';
+                        
+                        liquid.style.animation = 'sipDown 0.6s forwards ease-in-out';
+                        liquid.style.animationDelay = '0.2s'; 
+                        
+                        straw.style.animation = 'sipStrawDown 0.6s forwards ease-in-out';
+                        straw.style.animationDelay = '0.2s';
+
+                        lemon.style.animation = 'lemonWiggle 0.6s forwards ease-in-out';
+                        lemon.style.animationDelay = '0.2s';
+                    }, 10);
+
+                    // 3. Navigate to next page
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 1000); 
+                });
+            });
+        });
+    </script>
+    
+    <footer class="site-footer">
+        <img src="images/logo.svg" alt="Lemonade Production" class="footer-logo">
+        <p>© 2026 Lemonade Production. All rights reserved.</p>
+    </footer>
+</body>
+</html>
